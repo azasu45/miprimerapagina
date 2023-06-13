@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Mi Primer Website</title>
+  </head>
+  <body>
+    <header>
+      <!--Navbar Start-->
+      <nav id="navbar">
+        <a href="#principal" class="brand">
+          <h1>Miguel corbos</h1>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">INICIO</a>
+          </li>
+          <li>
+            <a href="services.html">SERVICIOS</a>
+          </li>
+          <li>
+            <a href="contact.html">CONTACTO</a>
+          </li>
+        </ul>
+        <button class="button-menu-toggle">Menu</button>
+      </nav>
+      <!--Navbar End-->
+      <!--Mobil Menu Start-->
+      <div id="menu-cortina" class="cortina"></div>
+      <div id="navbar-responsive" class="navbar-responsive">
+        <div style="display: flex">
+          <button
+            id="navbar-responsive-button"
+            style="
+              cursor: pointer;
+              background: none;
+              color: white;
+              margin-left: auto;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              style="height: 32px; width: 32px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="navbar-responsive-container">
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">INICIO</a>
+            </li>
+            <li>
+              <a href="services.html">SERVICIOS</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--Mobil Menu End-->
+    </header>
+    <section id="principal">
+      <div class="container">
+        <div class="card">
+          <h1>Bienvenidos a mi primer Website!</h1>
+          <div class="row">
+            <div class="column">
+              <h2>Lorem, ipsum dolor sit.</h2>
+              <p>Soy Miguel, ¡y esta es mi primera página web!</p>
+              <p>
+                Estoy aprendiendo desarrollo web para crear sitios web
+                visualmente atrapantes y funcionales.
+              </p>
+            </div>
+            <div class="column">
+              <h2>consectetur adipisicing.</h2>
+              <p>
+                A lo largo de este curso, estaré aprendiendo HTML, CSS y
+                JavaScript. Estos lenguajes me ayudarán a crear una base sólida
+                en el desarrollo web front-end.
+              </p>
+              <button onclick="showAlert()" style="padding: 0.5rem 1rem">
+                !Haz clic en mís
+              </button>
+            </div>
+            <div class="column">
+              <h2>Lorem, ipsum dolor sit.</h2>
+              <p>Soy Miguel, ¡y esta es mi primera página web!</p>
+              <p>
+                Estoy aprendiendo desarrollo web para crear sitios web
+                visualmente atrapantes y funcionales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card-container">
+        <div class="card">
+          <h3>Titulo de la tarjeta</h3>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident fuga autem accusamus quidem, suscipit atque illum
+              voluptates pariatur quam. Minima harum delectus voluptatum neque
+              cupiditate provident accusamus quis veritatis asperiores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Titulo de la tarjeta</h3>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident fuga autem accusamus quidem, suscipit atque illum
+              voluptates pariatur quam. Minima harum delectus voluptatum neque
+              cupiditate provident accusamus quis veritatis asperiores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Titulo de la tarjeta</h3>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident fuga autem accusamus quidem, suscipit atque illum
+              voluptates pariatur quam. Minima harum delectus voluptatum neque
+              cupiditate provident accusamus quis veritatis asperiores.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Titulo de la tarjeta</h3>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident fuga autem accusamus quidem, suscipit atque illum
+              voluptates pariatur quam. Minima harum delectus voluptatum neque
+              cupiditate provident accusamus quis veritatis asperiores.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/index.js"></script>
+  </body>
+</html>

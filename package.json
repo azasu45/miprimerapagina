@@ -1,0 +1,11 @@
+{
+  "name": "proyecto_eg",
+  "version": "0.0.1",
+  "description": "proyecto de miguel corbos creado en el curso de egg",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
