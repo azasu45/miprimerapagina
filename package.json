@@ -4,8 +4,12 @@
   "description": "proyecto de miguel corbos creado en el curso de egg",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.3.9"
+  }
 }
