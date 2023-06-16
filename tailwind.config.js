@@ -9,10 +9,10 @@ export default {
     extend: {},
   },
   corePlugins: {
-    aspectRatio: false,
+    aspectRatio: true,
   },
-  plugins: [
-    require("@tailwindcss/aspect-ratio")
-  ],
+  // plugins: [
+  //   require("@tailwindcss/aspect-ratio")
+  // ],
 }
 
