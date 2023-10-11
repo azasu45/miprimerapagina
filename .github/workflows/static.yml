@@ -40,8 +40,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Copy
-        run: cp -r .well-know dist/
+      # - name: Copy
+      #   run: cp -r .well-know dist/
+      - include: [".well-known"]
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
