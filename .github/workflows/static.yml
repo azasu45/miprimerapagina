@@ -40,6 +40,11 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Copy
+        uses: canastro/copy-file-action@master
+        with:
+          source: ".well-know/assetlinks.json"
+          target: ".dist/.well-know/assetlinks.json"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
