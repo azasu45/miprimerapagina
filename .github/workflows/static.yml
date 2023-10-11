@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Copy
-        run: cp -r .well-know dist/
+        run: cp -r .well-known dist/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
