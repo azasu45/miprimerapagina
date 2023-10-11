@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.easysolutions.paymonitor",
+      "sha256_cert_fingerprints": [
+        "7B:35:37:3D:46:1C:E9:36:9D:9A:20:0A:60:B1:15:2E:4A:EF:77:10:55:80:71:71:7A:BD:6C:45:A5:C6:53:A1"
+      ]
+    }
+  }
+]
