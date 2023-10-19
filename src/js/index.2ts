@@ -1,0 +1,30 @@
+import "./components";
+
+import { consume, provide } from "@lit/context";
+
+import { LitElement, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { AuthServiceContext, IAuthService } from "./services/auth_service";
+import { Asiento } from "./domain/index.ts";
+
+
+@customElement("my-app")
+export class MyApp extends LitElement {
+  @provide({ context: AuthServiceContext })
+  @property()
+  data: IAuthService = "Initial Value";
+
+  render() {
+    return html`<section>
+      <p>${this.data} Hola</p>
+      <slot></slot>
+    </section>`;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "my-app": MyApp;
+    "listado-asientos": ListadoAsientos;
+  }
+}
