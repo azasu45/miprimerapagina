@@ -1,3 +1,35 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+body {
+  color: #fff;
+  background-color: rgb(32, 32, 32);
+}
+
+my-app {
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section > img {
+  aspect-ratio: 1;
+  height: 250px;
+  border-radius: 12.5%;
+}
+
+.hero-section > .hero-section-box-content {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
