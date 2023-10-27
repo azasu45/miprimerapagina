@@ -1,28 +1,22 @@
+import { createClient } from "@supabase/supabase-js";
 import "../css/index.css";
-import { html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { provide, consume } from "@lit/context";
-import { AuthServiceContext, IAuthService } from "./services/auth_service";
 
-@customElement("my-app")
-export class ProviderEl extends LitElement {
-  @provide({ context: AuthServiceContext })
-  @property()
-  data = {
-    nombre: "Initial",
-  };
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_ANON
+);
 
-  render() {
-    return html`<slot></slot> <slot></slot>`;
-  }
-}
+let { data: tast_table } = await supabase
+  .from("cuentas")
+  .select(
+    `
+  *,
+  asientos(*)
+`
+  )
+  .ilike("nombre", "%banca%")
+  .order("fechaCreado", { foreignTable: "asientos", ascending: false });
 
-@customElement("consumer-el")
-export class ConsumerEl extends LitElement {
-  @consume({ context: AuthServiceContext })
-  providedData: IAuthService = {};
+console.log(tast_table);
 
-  render() {
-    return html` <h1>${this.providedData.nombre}</h1> `;
-  }
-}
+//https://jfqzxmgcfpengxewvwfa.supabase.co/rest/v1/cuentas?select=*,asientos(*)&asientos.order=fechaCreado.desc

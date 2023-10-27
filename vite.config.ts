@@ -9,6 +9,7 @@ export default defineConfig({
         about: resolve(__dirname, "src/pages/about.html"),
         contact: resolve(__dirname, "src/pages/contact.html"),
         services: resolve(__dirname, "src/pages/services.html"),
+        app: resolve(__dirname, "web/index.html"),
       },
     },
   },

@@ -133,7 +133,7 @@ _flutter.loader = null;
       }
       const {
         serviceWorkerVersion,
-        serviceWorkerUrl = `${baseUri}src/pages/web/flutter_service_worker.js?v=${serviceWorkerVersion}`,
+        serviceWorkerUrl = `${baseUri}flutter_service_worker.js?v=${serviceWorkerVersion}`,
         timeoutMillis = 4000,
       } = settings;
 
@@ -251,10 +251,8 @@ _flutter.loader = null;
      * Returns undefined when an `onEntrypointLoaded` callback is supplied in `options`.
      */
     async loadEntrypoint(options) {
-      const {
-        entrypointUrl = `${baseUri}src/pages/web/main.dart.js`,
-        onEntrypointLoaded,
-      } = options || {};
+      const { entrypointUrl = `./${baseUri}main.dart.js`, onEntrypointLoaded } =
+        options || {};
 
       return this._loadEntrypoint(entrypointUrl, onEntrypointLoaded);
     }
