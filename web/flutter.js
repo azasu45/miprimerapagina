@@ -21,7 +21,7 @@ _flutter.loader = null;
     if (uri == "") {
       return uri;
     }
-    return uri.endsWith("/") ? uri : `${uri}/`;
+    return uri.endsWith("/") ? uri + "web/" : `${uri}/`;
   }
 
   /**
@@ -75,7 +75,7 @@ _flutter.loader = null;
       if (window.trustedTypes) {
         this.policy = trustedTypes.createPolicy(policyName, {
           createScriptURL: function (url) {
-            const parsed = new URL(url, window.location);
+            const parsed = new URL(url, window.location.origin);
             const file = parsed.pathname.split("/").pop();
             const matches = patterns.some((pattern) => pattern.test(file));
             if (matches) {
@@ -134,7 +134,7 @@ _flutter.loader = null;
       const {
         serviceWorkerVersion,
         serviceWorkerUrl = `${baseUri}flutter_service_worker.js?v=${serviceWorkerVersion}`,
-        timeoutMillis = 4000,
+        timeoutMillis = 1000,
       } = settings;
 
       // Apply the TrustedTypes policy, if present.
@@ -251,7 +251,7 @@ _flutter.loader = null;
      * Returns undefined when an `onEntrypointLoaded` callback is supplied in `options`.
      */
     async loadEntrypoint(options) {
-      const { entrypointUrl = `./${baseUri}main.dart.js`, onEntrypointLoaded } =
+      const { entrypointUrl = `${baseUri}main.dart.js`, onEntrypointLoaded } =
         options || {};
 
       return this._loadEntrypoint(entrypointUrl, onEntrypointLoaded);
