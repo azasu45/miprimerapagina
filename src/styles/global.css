@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.resume-btn {
+  cursor: default;
+  border-radius: 0.5rem;
+  background-color: rgb(237 242 242 / var(--tw-bg-opacity));
+  padding: 0.5rem 1.25rem;
+  color: rgb(68 86 108 / var(--tw-text-opacity));
+}
+
+.dark .resume-btn,
+.resume-btn {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.dark .resume-btn {
+  background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+  color: rgb(166 166 166 / var(--tw-text-opacity));
+}
+
+.btnsocial {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 246 246 / var(--tw-bg-opacity));
+  --tw-gradient-from: #fa5252;
+  --tw-gradient-to: rgba(250, 82, 82, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #dd2476;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnsocial:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .btnsocial {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 36 37 / var(--tw-bg-opacity));
+}
+
+.fillter-btn {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(68 86 108 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+}
+
+.fillter-btn:hover {
+  --tw-text-opacity: 1;
+  color: rgb(250 82 82 / var(--tw-text-opacity));
+}
+
+.dark .fillter-btn {
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
+}
+
+.after-effect {
+  position: relative;
+  display: inline-block;
+  --tw-gradient-from: #fa5252;
+  --tw-gradient-to: rgba(250, 82, 82, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #dd2476;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.after-effect,
+.after-effect:after {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after-effect:after {
+  position: absolute;
+  top: 50%;
+  height: 0.125rem;
+  --tw-translate-y: -50%;
+  border-radius: 0.375rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.dark .after-effect {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .after-effect:after {
+    content: var(--tw-content);
+    width: 12rem;
+  }
+}
+
+.about-box {
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(33 36 37 / var(--tw-border-opacity));
+  padding: 1.5rem;
+}
+
+.dark .about-box {
+  border-width: 2px;
+}

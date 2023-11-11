@@ -1,0 +1,95 @@
+---
+
+---
+
+<div id="image-carousel" class="splide" aria-label="Beautiful Images">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="HTML"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="CSS"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="JavaScript"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+        />
+      </li>
+
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="TypeScript"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="NodeJs"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="Dart"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="Php"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="h-32 w-32 object-cover"
+          alt="Python"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import "@splidejs/splide/css/sea-green";
+  import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide("#image-carousel", {
+      type: "loop",
+      drag: "free",
+      focus: "center",
+      autoHeight: true,
+      autoWidth: true,
+      autoScroll: {
+        speed: 0.5,
+      },
+      perPage: 6,
+    });
+    splide.mount({ AutoScroll });
+  });
+</script>

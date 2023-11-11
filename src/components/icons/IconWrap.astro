@@ -1,0 +1,11 @@
+---
+const { color } = Astro.props;
+---
+
+<span
+  class={`flex-shrink-0 btnsocial bg-white dark:bg-black text-${
+    color ?? "white"
+  } shadow-md`}
+>
+  <slot />
+</span>

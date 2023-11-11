@@ -1,0 +1,45 @@
+---
+import TecnicCard from "./TecnicCard.astro";
+
+import IconCleanCode from "./icons/IconsCard/IconCleanCode.astro";
+import IconDesign from "./icons/IconsCard/IconDesign.astro";
+import IconBugs from "./icons/IconsCard/IconBugs.astro";
+import IconApi from "./icons/IconsCard/IconApi.astro";
+
+const tecni = [
+  {
+    title: "Manejo de APIs",
+    description: "Rest y Graphql",
+    icon: IconApi,
+  },
+  {
+    title: "Apps Multi-Plataforma",
+    description:
+      "Creación de aplicaciones multiplataforma con Flutter y implementando cualquier origen de datos necesario",
+    icon: IconDesign,
+  },
+  {
+    title: "Código y Arquitecta",
+    description:
+      "Aplicación de clean code para legibilidad del código y mejor experiencia de trabajo.",
+    icon: IconCleanCode,
+  },
+  {
+    title: "Depuración",
+    description: "Depurando todas las aplicaciones paso a paso",
+    icon: IconBugs,
+  },
+];
+---
+
+<div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+  {
+    tecni.map((tec) => (
+      <TecnicCard
+        title={tec.title}
+        description={tec.description}
+        Icon={tec.icon}
+      />
+    ))
+  }
+</div>

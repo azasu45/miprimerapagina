@@ -1,0 +1,80 @@
+---
+
+---
+
+<div id="image-carousel-f" class="splide" aria-label="Beautiful Images">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img
+          class="object-cover w-32 h-32"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg"
+        />
+      </li>
+
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="PostGres"
+          src="/icons/prisma.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="Bootstrap"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+        />
+      </li>
+      <li class="splide__slide">
+        <img
+          class="object-cover h-32 w-32"
+          alt="PostGres"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import "@splidejs/splide/css/sea-green";
+  import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide("#image-carousel-f", {
+      type: "loop",
+      drag: "free",
+      focus: "center",
+      autoScroll: {
+        speed: -0.5,
+      },
+      autoHeight: true,
+      autoWidth: true,
+    });
+    splide.mount({ AutoScroll });
+  });
+</script>

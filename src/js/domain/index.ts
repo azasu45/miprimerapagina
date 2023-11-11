@@ -1,1 +1,0 @@
-export { Asiento } from "./asientos";
